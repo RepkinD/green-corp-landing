@@ -168,7 +168,7 @@ footer {
 }
 
 .footer__copyright {
-    padding-top: 40px;
+    margin-top: 40px;
     text-align: center;
     opacity: 0.5;
 }
@@ -177,14 +177,17 @@ footer {
     margin-right: 80px;
 }
 
-h3 {
+footer h3 {
     font-size: 16px;
     opacity: 0.7;
     margin-bottom: 30px;
 }
 
-.footer__links a {
+.footer__links {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
 }
+
+.footer__links a {
+    margin-bottom: 15px;
+ }
