@@ -23,7 +23,7 @@ function initIncreaseNumberAnimation() {
   increaseNumberAnimationStep(0, element, 5000);
 }
 
-/*добавление класса header__scrolled в header при скроле*/
+/*добавление класса header__scrolled в header при скролле*/
 function updateScroll() {
   if (window.scrollY > 0) {
     document.querySelector('header').classList.add('header__scrolled');
@@ -62,14 +62,14 @@ document.querySelector('#budget').addEventListener('change',
       input.placeholder = "Введите ваш вариант";
 
       formContainer.appendChild(input);
-      document.querySelector('.form form').insertBefore(formContainer,
+      document.querySelector('.form_form').insertBefore(formContainer,
         document.querySelector('.form__submit')
       );
     }
 
     const otherInput = document.querySelector('.form__other-input');
     if (event.target.value !== 'other' && otherInput) {
-      document.querySelector('.form form').removeChild(otherInput);
+      document.querySelector('.form_form').removeChild(otherInput);
     }
   });
 
@@ -91,9 +91,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 addSmoothScroll(document.querySelector('.more-button'));
 
-// function onLinkClick(event) {
-//   event.preventDefault();
+function onLinkClick(event) {
+  event.preventDefault();
 
-//   document.querySelector(event.target.getAttribute('href'))
-//     .scrollIntoView({ behavior: 'smooth' });
-// }
+  document.querySelector(event.target.getAttribute('href'))
+    .scrollIntoView({ behavior: 'smooth' });
+}
